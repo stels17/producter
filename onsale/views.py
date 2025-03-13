@@ -49,5 +49,5 @@ def product_list(request):
         'categories': service.get_all_categories(),
         'tags': service.get_all_tags(),
         'selected_tags': tag_ids,  # Ensures checkboxes remain checked
-        'total_products': products_found.count(),
+        'total_products': paginator.count,
     })
