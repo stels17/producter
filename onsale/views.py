@@ -7,6 +7,7 @@ from onsale import service
 
 
 def bad_request_view(request, exception=None, message=None):
+    """ For directing an errored request """
     context = {
         "message": message if message else "Invalid request. Please try again."
     }
@@ -24,6 +25,7 @@ def validate_id_str(id_str: str):
 # Create your views here.
 @require_http_methods(['GET'])
 def product_list(request):
+    """ Accepts user requests and prepares data for rendering the template """
     page_number = request.GET.get("page", 1)
     search_str = request.GET.get('q', "")
     category_id = request.GET.get('category', "")
@@ -49,5 +51,5 @@ def product_list(request):
         'categories': service.get_all_categories(),
         'tags': service.get_all_tags(),
         'selected_tags': tag_ids,  # Ensures checkboxes remain checked
-        'total_products': products_found.count(),
+        'total_products': paginator.count,
     })

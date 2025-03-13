@@ -10,7 +10,7 @@ Producter is a simple Django-based product listing application. It allows users 
 
 Ensure you have the following installed:
 
-- [Python 3.10 or newer](https://www.python.org/downloads/release/python-3100/)
+- [Python 3.12 or newer](https://www.python.org/downloads/release/python-3120/)
 - [Poetry](https://python-poetry.org/docs/#installation)
 
 ### 2️⃣ Installation
@@ -19,7 +19,7 @@ Clone the repository and install dependencies using Poetry:
 
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/producter.git
+git clone https://github.com/stels17/producter.git
 cd producter
 
 # Install dependencies
@@ -49,7 +49,15 @@ To populate the database with sample products, run:
 poetry run python manage.py loaddata expanded_data
 ```
 
-### 6️⃣ Running the Development Server
+### 6️⃣ Collect Static Files
+
+Before running the server, collect all static files:
+
+```sh
+poetry run python manage.py collectstatic --noinput
+```
+
+### 7️⃣ Running the Development Server
 
 Start the local development server:
 
@@ -57,7 +65,9 @@ Start the local development server:
 poetry run python manage.py runserver
 ```
 
-The app will be available at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**.
+The app should be available at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+
+Admin Panel is available at **/admin**, default credentials: **admin/admin123**
 
 ---
 
@@ -86,7 +96,6 @@ AI was used to:
 
 - Search. In a real application this should be implemented using the appropriate technologies. Maybe something like [https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/)
 - Caching. We can cache the products for the initial page the user sees, getting categories and tags
-- Use gunicorn
+- Use gunicorn in the production environment as out-of-box runserver isn't suitable for that
 - Implement logging
-
 
