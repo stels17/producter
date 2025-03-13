@@ -1,0 +1,174 @@
+[
+  {
+    "model": "onsale.category",
+    "pk": 1,
+    "fields": {
+      "title": "Furniture",
+      "created_at": "2025-03-12T23:36:05.328874Z"
+    }
+  },
+  {
+    "model": "onsale.category",
+    "pk": 2,
+    "fields": {
+      "title": "Electronics",
+      "created_at": "2025-03-12T23:36:05.328883Z"
+    }
+  },
+  {
+    "model": "onsale.category",
+    "pk": 3,
+    "fields": {
+      "title": "Clothing",
+      "created_at": "2025-03-12T23:36:05.328885Z"
+    }
+  },
+  {
+    "model": "onsale.category",
+    "pk": 4,
+    "fields": {
+      "title": "Books",
+      "created_at": "2025-03-12T23:39:03.520755Z"
+    }
+  },
+  {
+    "model": "onsale.tag",
+    "pk": 1,
+    "fields": {
+      "title": "Best Seller",
+      "created_at": "2025-03-12T23:36:05.328975Z"
+    }
+  },
+  {
+    "model": "onsale.tag",
+    "pk": 2,
+    "fields": {
+      "title": "Discounted",
+      "created_at": "2025-03-12T23:36:05.328978Z"
+    }
+  },
+  {
+    "model": "onsale.tag",
+    "pk": 3,
+    "fields": {
+      "title": "Limited Edition",
+      "created_at": "2025-03-12T23:36:05.328980Z"
+    }
+  },
+  {
+    "model": "onsale.tag",
+    "pk": 4,
+    "fields": {
+      "title": "Exclusive Offer",
+      "created_at": "2025-03-12T23:40:08.260741Z"
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 1,
+    "fields": {
+      "title": "Modern Sofa",
+      "category": 1,
+      "description": "A stylish and comfortable sofa perfect for any living room.",
+      "price": 49999,
+      "created_at": "2025-03-12T23:36:05.329164Z",
+      "updated_at": "2025-03-12T23:36:05.329167Z",
+      "tags": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 2,
+    "fields": {
+      "title": "Gaming Laptop",
+      "category": 2,
+      "description": "A high-performance laptop for gamers and creators.",
+      "price": 149999,
+      "created_at": "2025-03-12T23:36:05.329175Z",
+      "updated_at": "2025-03-12T23:36:05.329176Z",
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 3,
+    "fields": {
+      "title": "Wireless Earbuds",
+      "category": 2,
+      "description": "Compact and high-quality sound wireless earbuds.",
+      "price": 9999,
+      "created_at": "2025-03-12T23:36:05.329182Z",
+      "updated_at": "2025-03-12T23:36:05.329184Z",
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 4,
+    "fields": {
+      "title": "Winter Jacket",
+      "category": 3,
+      "description": "A warm and cozy jacket for cold weather.",
+      "price": 7999,
+      "created_at": "2025-03-12T23:36:05.329189Z",
+      "updated_at": "2025-03-12T23:36:05.329190Z",
+      "tags": [
+        3,
+        1
+      ]
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 5,
+    "fields": {
+      "title": "Dining Chair",
+      "category": 1,
+      "description": "A sturdy wooden dining chair with a modern touch.",
+      "price": 5999,
+      "created_at": "2025-03-12T23:36:05.329195Z",
+      "updated_at": "2025-03-12T23:36:05.329197Z",
+      "tags": [
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 6,
+    "fields": {
+      "title": "Compact Office Desk",
+      "category": 1,
+      "description": "A space-saving office desk with a modern, minimalistic design, perfect for home or office use.",
+      "price": 45999,
+      "created_at": "2025-03-12T12:00:00.000Z",
+      "updated_at": "2025-03-12T12:00:00.000Z",
+      "tags": []
+    }
+  },
+  {
+    "model": "onsale.product",
+    "pk": 7,
+    "fields": {
+      "title": "Stylish Sunglasses",
+      "category": 3,
+      "description": "Trendy and lightweight sunglasses with UV protection, suitable for all outdoor activities.",
+      "price": 14999,
+      "created_at": "2025-03-12T12:05:00.000Z",
+      "updated_at": "2025-03-12T12:05:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  }
+]

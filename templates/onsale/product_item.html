@@ -1,0 +1,20 @@
+<li class="bg-amber-100 p-4 rounded-lg shadow mb-4">
+    <h3 class="text-xl font-semibold">{{ product.title }}</h3>
+    <p><em><strong>{{ product.category.title }}</strong></em></p>
+
+    <!-- Price Display -->
+    <p class="text-lg font-bold text-amber-700 mt-2">
+        ${{ product.price_real|floatformat:2 }}
+    </p>
+
+    <p class="text-gray-600">{{ product.description }}</p>
+
+    {% if product.tags.all %}
+    <p class="text-sm text-gray-500 mt-2">
+        Tags:
+        {% for tag in product.tags.all %}
+            <span class="bg-white text-gray-700 px-2 py-1 rounded-lg text-xs">{{ tag.title }}</span>
+        {% endfor %}
+    </p>
+    {% endif %}
+</li>

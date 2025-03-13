@@ -1,0 +1,439 @@
+[
+    {
+        "model": "onsale.category",
+        "pk": 1,
+        "fields": {
+            "title": "Home goods",
+            "created_at": "2025-03-12T04:00:55.161Z"
+        }
+    },
+    {
+        "model": "onsale.category",
+        "pk": 2,
+        "fields": {
+            "title": "Apparel",
+            "created_at": "2025-03-12T04:24:41.149Z"
+        }
+    },
+    {
+        "model": "onsale.category",
+        "pk": 3,
+        "fields": {
+            "title": "Footwear",
+            "created_at": "2025-03-12T04:24:54.572Z"
+        }
+    },
+    {
+        "model": "onsale.category",
+        "pk": 4,
+        "fields": {
+            "title": "Electronics",
+            "created_at": "2025-03-12T23:21:10.811830Z"
+        }
+    },
+    {
+        "model": "onsale.category",
+        "pk": 5,
+        "fields": {
+            "title": "Books",
+            "created_at": "2025-03-12T23:21:10.811839Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 1,
+        "fields": {
+            "title": "Best value for money",
+            "created_at": "2025-03-12T04:02:34.802Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 2,
+        "fields": {
+            "title": "Highest quality",
+            "created_at": "2025-03-12T04:02:49.117Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 3,
+        "fields": {
+            "title": "No frills",
+            "created_at": "2025-03-12T04:04:41.396Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 4,
+        "fields": {
+            "title": "Extra comfort",
+            "created_at": "2025-03-12T04:25:08.401Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 5,
+        "fields": {
+            "title": "Limited Edition",
+            "created_at": "2025-03-12T23:21:10.811903Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 6,
+        "fields": {
+            "title": "Eco-friendly",
+            "created_at": "2025-03-12T23:21:10.811906Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 7,
+        "fields": {
+            "title": "Tech-Savvy",
+            "created_at": "2025-03-12T23:21:10.811908Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 8,
+        "fields": {
+            "title": "Bestseller",
+            "created_at": "2025-03-12T23:21:10.811910Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 9,
+        "fields": {
+            "title": "Handmade",
+            "created_at": "2025-03-12T23:21:10.811912Z"
+        }
+    },
+    {
+        "model": "onsale.tag",
+        "pk": 10,
+        "fields": {
+            "title": "Premium Quality",
+            "created_at": "2025-03-12T23:21:10.811914Z"
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 1,
+        "fields": {
+            "title": "Green couch",
+            "category": 1,
+            "description": "This is a very good green couch for your living room",
+            "price": 1234550,
+            "created_at": "2025-03-12T04:07:36.504Z",
+            "updated_at": "2025-03-12T04:27:38.764Z",
+            "tags": [
+                4,
+                2
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 2,
+        "fields": {
+            "title": "Dining table",
+            "category": 1,
+            "description": "A huge table",
+            "price": 25000,
+            "created_at": "2025-03-12T04:29:49.181Z",
+            "updated_at": "2025-03-12T04:30:27.658Z",
+            "tags": []
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 3,
+        "fields": {
+            "title": "Adidas Predator Pulse",
+            "category": 3,
+            "description": "You'll beat everybody!",
+            "price": 30000,
+            "created_at": "2025-03-12T04:31:59.200Z",
+            "updated_at": "2025-03-12T04:31:59.200Z",
+            "tags": [
+                4,
+                2
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 4,
+        "fields": {
+            "title": "Nike regular sneakers",
+            "category": 3,
+            "description": "You can run in them, as well as go to gym, work or hiking! Everybody should own a pair!",
+            "price": 7500,
+            "created_at": "2025-03-12T04:33:31.501Z",
+            "updated_at": "2025-03-12T04:33:45.588Z",
+            "tags": [
+                4,
+                3
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 5,
+        "fields": {
+            "title": "Smartphone X",
+            "category": 4,
+            "description": "A high-end smartphone with an ultra-fast processor, high refresh rate screen, and superior camera quality.",
+            "price": 99999,
+            "created_at": "2025-03-12T23:21:10.812271Z",
+            "updated_at": "2025-03-12T23:21:10.812275Z",
+            "tags": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 6,
+        "fields": {
+            "title": "Wireless Headphones",
+            "category": 4,
+            "description": "Noise-canceling wireless headphones with 40-hour battery life and deep bass.",
+            "price": 19999,
+            "created_at": "2025-03-12T23:21:10.812285Z",
+            "updated_at": "2025-03-12T23:21:10.812287Z",
+            "tags": [
+                10
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 7,
+        "fields": {
+            "title": "E-Reader Pro",
+            "category": 5,
+            "description": "Lightweight and waterproof e-reader with a high-resolution display and adjustable warm light.",
+            "price": 14999,
+            "created_at": "2025-03-12T23:21:10.812299Z",
+            "updated_at": "2025-03-12T23:21:10.812300Z",
+            "tags": [
+                5,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 8,
+        "fields": {
+            "title": "Gaming Laptop",
+            "category": 4,
+            "description": "A powerful gaming laptop equipped with the latest GPU, fast refresh rate, and extensive cooling system.",
+            "price": 249999,
+            "created_at": "2025-03-12T23:21:10.812310Z",
+            "updated_at": "2025-03-12T23:21:10.812313Z",
+            "tags": [
+                9,
+                5,
+                8
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 9,
+        "fields": {
+            "title": "Hardcover Fantasy Novel",
+            "category": 5,
+            "description": "A beautifully crafted hardcover edition of a bestselling fantasy series.",
+            "price": 2500,
+            "created_at": "2025-03-12T23:21:10.812322Z",
+            "updated_at": "2025-03-12T23:21:10.812324Z",
+            "tags": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 10,
+        "fields": {
+            "title": "Eco-Friendly Yoga Mat",
+            "category": 1,
+            "description": "A non-slip, eco-friendly yoga mat made from recycled materials, offering superior comfort and support.",
+            "price": 4999,
+            "created_at": "2025-03-12T23:21:10.812333Z",
+            "updated_at": "2025-03-12T23:21:10.812335Z",
+            "tags": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 11,
+        "fields": {
+            "title": "Designer Leather Jacket",
+            "category": 2,
+            "description": "A premium leather jacket with a classic fit, made from genuine full-grain leather.",
+            "price": 129999,
+            "created_at": "2025-03-12T23:21:10.812345Z",
+            "updated_at": "2025-03-12T23:21:10.812348Z",
+            "tags": [
+                10,
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 12,
+        "fields": {
+            "title": "Random Running Shoes",
+            "category": 3,
+            "description": "Lightweight and breathable running shoes with superior cushioning and energy return.",
+            "price": 8999,
+            "created_at": "2025-03-12T23:21:10.812362Z",
+            "updated_at": "2025-03-12T23:21:10.812364Z",
+            "tags": [
+                6,
+                4
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 13,
+        "fields": {
+            "title": "Noise-Reducing Office Chair",
+            "category": 1,
+            "description": "Ergonomic office chair with noise-reducing features and memory foam padding.",
+            "price": 59999,
+            "created_at": "2025-03-12T23:21:10.812372Z",
+            "updated_at": "2025-03-12T23:21:10.812373Z",
+            "tags": [
+                4,
+                8
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 14,
+        "fields": {
+            "title": "Smartwatch",
+            "category": 4,
+            "description": "A sleek smartwatch with health tracking, GPS, and a vibrant AMOLED display.",
+            "price": 34999,
+            "created_at": "2025-03-12T23:21:10.812479Z",
+            "updated_at": "2025-03-12T23:21:10.812485Z",
+            "tags": [
+                3,
+                4,
+                10
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 15,
+        "fields": {
+            "title": "Ultra HD 4K TV",
+            "category": 4,
+            "description": "A stunning 4K Ultra HD television with vibrant colors, HDR support, and smart capabilities.",
+            "price": 199999,
+            "created_at": "2025-03-12T23:31:49.525130Z",
+            "updated_at": "2025-03-12T23:31:49.525137Z",
+            "tags": [
+                3,
+                2,
+                10
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 16,
+        "fields": {
+            "title": "Luxury Silk Scarf",
+            "category": 2,
+            "description": "A beautifully crafted silk scarf with intricate designs, perfect for elegant styling.",
+            "price": 8999,
+            "created_at": "2025-03-12T23:31:49.525147Z",
+            "updated_at": "2025-03-12T23:31:49.525148Z",
+            "tags": [
+                8,
+                10
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 17,
+        "fields": {
+            "title": "Handcrafted Wooden Desk",
+            "category": 1,
+            "description": "A solid wood desk with a handcrafted finish, offering durability and timeless design.",
+            "price": 79999,
+            "created_at": "2025-03-12T23:31:49.525155Z",
+            "updated_at": "2025-03-12T23:31:49.525156Z",
+            "tags": [
+                2,
+                1
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 18,
+        "fields": {
+            "title": "Smart Home Security Camera",
+            "category": 4,
+            "description": "A high-definition smart security camera with AI-powered motion detection and two-way audio.",
+            "price": 45999,
+            "created_at": "2025-03-12T23:31:49.525163Z",
+            "updated_at": "2025-03-12T23:31:49.525164Z",
+            "tags": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 19,
+        "fields": {
+            "title": "Professional DSLR Camera",
+            "category": 4,
+            "description": "A full-frame DSLR camera with high megapixel resolution, fast autofocus, and 4K video recording.",
+            "price": 349999,
+            "created_at": "2025-03-12T23:31:49.525170Z",
+            "updated_at": "2025-03-12T23:31:49.525171Z",
+            "tags": [
+                5,
+                9
+            ]
+        }
+    },
+    {
+        "model": "onsale.product",
+        "pk": 20,
+        "fields": {
+            "title": "Bestselling Mystery Novel",
+            "category": 5,
+            "description": "A gripping and immersive mystery novel that keeps you on the edge of your seat.",
+            "price": 2999,
+            "created_at": "2025-03-12T23:31:49.525177Z",
+            "updated_at": "2025-03-12T23:31:49.525178Z",
+            "tags": [
+                7,
+                1
+            ]
+        }
+    }
+]

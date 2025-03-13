@@ -1,0 +1,28 @@
+{% extends 'onsale/base.html' %}
+
+{% block title %}Product List{% endblock %}
+
+{% block content %}
+    <h2 class="text-2xl font-semibold mb-4">Hand-picked for you — explore our finest collection!</h2>
+
+    {% include 'onsale/search_form.html' %}
+
+    <!-- Product Count Caption -->
+    {% if products  %}
+    <p class="text-lg font-medium text-gray-700 mt-4">
+        Found {{ total_products }} product{{ total_products|pluralize:"s" }}
+    </p>
+    {% endif %}
+
+    <ul>
+        {% for product in products %}
+            {% include 'onsale/product_item.html' %}
+        {% empty %}
+            <li class="text-gray-500">No products found.</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Pagination Controls -->
+    {% include 'onsale/pagination.html' %}
+
+{% endblock %}

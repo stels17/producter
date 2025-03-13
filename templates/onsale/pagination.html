@@ -1,0 +1,19 @@
+<div class="mt-10 flex justify-center space-x-2">
+    {% if products.has_previous %}
+        <a href="?page=1{% if query %}&q={{ query }}{% endif %}{% if category_id %}&category={{ category_id }}{% endif %}{% for tag in selected_tags %}&tags={{ tag }}{% endfor %}"
+           class="px-3 py-2 bg-gray-300 rounded">First</a>
+        <a href="?page={{ products.previous_page_number }}{% if query %}&q={{ query }}{% endif %}{% if category_id %}&category={{ category_id }}{% endif %}{% for tag in selected_tags %}&tags={{ tag }}{% endfor %}"
+           class="px-3 py-2 bg-gray-300 rounded">Previous</a>
+    {% endif %}
+
+    <span class="px-4 py-2 bg-gray-500 text-white rounded">
+            Page {{ products.number }} of {{ products.paginator.num_pages }}
+        </span>
+
+    {% if products.has_next %}
+        <a href="?page={{ products.next_page_number }}{% if query %}&q={{ query }}{% endif %}{% if category_id %}&category={{ category_id }}{% endif %}{% for tag in selected_tags %}&tags={{ tag }}{% endfor %}"
+           class="px-3 py-2 bg-gray-300 rounded">Next</a>
+        <a href="?page={{ products.paginator.num_pages }}{% if query %}&q={{ query }}{% endif %}{% if category_id %}&category={{ category_id }}{% endif %}{% for tag in selected_tags %}&tags={{ tag }}{% endfor %}"
+           class="px-3 py-2 bg-gray-300 rounded">Last</a>
+    {% endif %}
+</div>

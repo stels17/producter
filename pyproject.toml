@@ -4,11 +4,22 @@ version = "0.1.0"
 description = ""
 authors = ["Denis Kondratiev <denis.kondratev.ca@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.1.7"
+environs = "^14.1.1"
+dj-database-url = "^2.3.0"
+psycopg = {version = "^3.2.5", extras = ["binary"]}
 
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "producter.settings"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-django = "^4.10.0"
+pytest-factoryboy = "^2.7.0"
 
 [build-system]
 requires = ["poetry-core"]
