@@ -8,32 +8,47 @@ Producter is a simple Django-based product listing application. It allows users 
 
 ### 1️⃣ Prerequisites
 
-Ensure you have the following installed:
-
-- [Python 3.12 or newer](https://www.python.org/downloads/release/python-3120/)
-- [Poetry](https://python-poetry.org/docs/#installation)
-
-### 2️⃣ Installation
-
-Clone the repository and install dependencies using Poetry:
+Clone the repository:
 
 ```sh
 # Clone the repository
 git clone https://github.com/stels17/producter.git
 cd producter
-
-# Install dependencies
-poetry install
 ```
 
-### 3️⃣ Adjust Environment Settings (Optional)
+### 2️⃣ Adjust Environment Settings (Optional)
 
 If needed, configure your environment settings:
 
 - Rename `.env.example` to `.env`.
 - Update the environment variables with appropriate values.
 
-### 4️⃣ Database Setup
+### 3️⃣ Run with Docker
+
+To build and run the application in Docker, use:
+
+```sh
+sh build_run.sh
+```
+
+The app should be available at **[http://localhost:8888/](http://localhost:8888/)**
+
+Admin Panel is available at **/admin**, default credentials: **admin/admin123**
+
+### 4️⃣ Run Locally
+
+Ensure you have the following installed:
+
+- **[Python 3.12 or newer](https://www.python.org/downloads/release/python-3120/)**
+- **[Poetry](https://python-poetry.org/docs/#installation)**
+
+Install dependencies:
+
+```sh
+poetry install
+```
+
+### 4.1 Database Setup
 
 Run migrations to set up the database:
 
@@ -41,7 +56,7 @@ Run migrations to set up the database:
 poetry run python manage.py migrate
 ```
 
-### 5️⃣ Load Sample Data
+### 4.2 Load Sample Data
 
 To populate the database with sample products, run:
 
@@ -49,7 +64,7 @@ To populate the database with sample products, run:
 poetry run python manage.py loaddata expanded_data
 ```
 
-### 6️⃣ Collect Static Files
+### 4.3 Collect Static Files
 
 Before running the server, collect all static files:
 
@@ -57,17 +72,17 @@ Before running the server, collect all static files:
 poetry run python manage.py collectstatic --noinput
 ```
 
-### 7️⃣ Running the Development Server
+### 4.4 Running the Development Server
 
 Start the local development server:
 
 ```sh
-poetry run python manage.py runserver
+poetry run python manage.py runserver 8000
 ```
 
 The app should be available at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
-Admin Panel is available at **/admin**, default credentials: **admin/admin123**
+Admin Panel is available at **[/admin](http://127.0.0.1:8000/admin)**, default credentials: **admin/admin123**
 
 ---
 
@@ -94,8 +109,8 @@ AI was used to:
 
 ## Further Notes
 
-- Search. In a real application this should be implemented using the appropriate technologies. Maybe something like [https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/)
-- Caching. We can cache the products for the initial page the user sees, getting categories and tags
-- Use gunicorn in the production environment as out-of-box runserver isn't suitable for that
-- Implement logging
+- **Search**: In a real application, this should be implemented using the appropriate technologies, such as [Django's PostgreSQL Full-Text Search](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/).
+- **Caching**: We can cache the products for the initial page the user sees, including category and tag retrieval.
+- **Production Server**: Use **Gunicorn** or another WSGI server in production, as the built-in `runserver` is not suitable.
+- **Logging**: Implement structured logging for better debugging and monitoring.
 
