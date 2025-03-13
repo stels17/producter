@@ -47,4 +47,5 @@ class Product(models.Model):
         return f"{self.title} {self.price_display}"
 
     def tags_list(self):
-        return ",".join(self.tags.values_list('title', flat=True))[:100]
+        return ", ".join(tag.title for tag in self.tags.all())[:100]
+
