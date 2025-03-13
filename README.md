@@ -109,8 +109,7 @@ AI was used to:
 
 ## Further Notes
 
-- **Search**: In a real application, this should be implemented using the appropriate technologies, such as [Django's PostgreSQL Full-Text Search](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/).
-- **Caching**: We can cache the products for the initial page the user sees, including category and tag retrieval.
-- **Production Server**: Use **Gunicorn** or another WSGI server in production, as the built-in `runserver` is not suitable.
-- **Logging**: Implement structured logging for better debugging and monitoring.
-
+- **Search**. In a real application this should be implemented using the appropriate technologies. Maybe something like [https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/)
+- **Caching**. We can cache the products for the initial page the user sees, getting categories and tags
+- Use gunicorn in the production environment as out-of-box runserver isn't suitable for that
+- Implement logging
