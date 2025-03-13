@@ -67,6 +67,8 @@ poetry run python manage.py runserver
 
 The app should be available at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
+Admin Panel is available at **/admin**, default credentials: **admin/admin123**
+
 ---
 
 ## Running Tests
@@ -94,6 +96,6 @@ AI was used to:
 
 - Search. In a real application this should be implemented using the appropriate technologies. Maybe something like [https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/)
 - Caching. We can cache the products for the initial page the user sees, getting categories and tags
-- Use gunicorn
+- Use gunicorn in the production environment as out-of-box runserver isn't suitable for that
 - Implement logging
 
