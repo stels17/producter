@@ -51,25 +51,14 @@ COPY --from=builder-base $VENV_PATH $VENV_PATH
 COPY ./entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
-
-RUN rm -r -f /var/logs && mkdir -p /var/logs && chmod 777 -R /var/logs
-# COPY ./producter /app
 COPY . /app
 WORKDIR /app
-
-# From GitHub
-# Unfortunately doesnt work
-LABEL org.opencontainers.image.description="Sample description"
-
-#VOLUME ["/var/logs", "/_config"]
 
 # activate our virtual environment here
 RUN . /opt/pysetup/.venv/bin/activate
 
 RUN python manage.py collectstatic --no-input
 
-#ENV DOCKER_CMD="python manage.py migrate && gunicorn copiador.wsgi:application -b 0.0.0.0:8000 --workers 2 \
-#--timeout 120 --limit-request-line 8190 --max-requests=4000 --max-requests-jitter=500"
 ENV DOCKER_CMD="python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
 
 ENTRYPOINT /docker-entrypoint.sh $0 $@
