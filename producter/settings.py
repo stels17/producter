@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+from environs import Env
+import dj_database_url
+
+env = Env()
+env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +31,7 @@ SECRET_KEY = 'django-insecure-*=h0y4cgy!wi5p9imeu*@2r$g9%%gb!0m%dh8pkox&7h*w0eg+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,3 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ADMIN_PANEL_TITLE = env.str('ADMIN_PANEL_TITLE', 'Local Producter Admin')
+
+PRODUCTS_PER_PAGE = env.int('PRODUCTS_PER_PAGE', 5)

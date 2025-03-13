@@ -1,0 +1,49 @@
+<!-- search_form.html -->
+<form method="GET" action="" class="mb-6">
+    <div class="flex items-center space-x-4">
+        <!-- Search Input -->
+        <input
+            type="text"
+            name="q"
+            placeholder="Search products... For example, run"
+            value="{{ request.GET.q }}"
+            class="p-2 border border-gray-300 rounded-lg w-1/2"
+        >
+
+        <!-- Category Dropdown -->
+        <select name="category" class="p-2 px-3 border border-gray-300 rounded-lg">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}" {% if request.GET.category == category.id|stringformat:"s" %}selected{% endif %}>
+                    {{ category.title }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Tag Checkboxes -->
+    <div class="mt-4">
+        <p class="font-semibold">Filter by Tags:</p>
+        <div class="flex flex-wrap gap-2">
+            {% for tag in tags %}
+            <label class="flex items-center focus:ring-amber-400 space-x-2 text-amber-700  bg-amber-100 border-amber-300 px-3 py-1 rounded-lg cursor-pointer">
+                <input
+                    type="checkbox"
+                    name="tags"
+                    value="{{ tag.id }}"
+                    {% if tag.id|stringformat:"s" in selected_tags %}checked{% endif %}
+                    class="form-checkbox"
+                >
+                <span>{{ tag.title }}</span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+        type="submit"
+        class="bg-amber-500 hover:bg-amber-600 text-white font-bold p-2 px-3 rounded mt-4">
+        Search
+    </button>
+</form>
